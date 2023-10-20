@@ -56,24 +56,20 @@ public class Main {
         total = 0;
         count = 0;
         int month = 9 * 12;
-        for (; month > 0; month--) {
+        for (; count < month; count++) {
             total = total + (total * 7 / 100);
             total = total + deposit;
             if (count % 6 == 0 && count != 0) {
                 System.out.println(count + " месяц сумма накоплений равна " + total);
             }
-            count++;
 
         }
         // Задание № 7
         int dayFriday = 5;
-        count = 0;
-        for (; dayFriday <= 31; dayFriday++) {
-            if (count % 7 == 0) {
+        for (; dayFriday <= 31; dayFriday += 7) {
                 System.out.println("Сегодня пятница, " + dayFriday +
                         " е число. Необходимо подготовить отчет");
-            }
-            count++;
+
         }
         // Задание № 8
         year = 0;
