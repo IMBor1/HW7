@@ -23,25 +23,23 @@ public class Main {
         }
         // Задание № 3
         int people = 12_000_000;
-        int birthRatePerYear = 17 * (12000000 / 1000);
-        int mortalityPerYear = 8 * (12000000 / 1000);
         int year = 0;
         for (; year <= 10; year++) {
+            int birthRatePerYear = 17 * (people / 1000);
+            int mortalityPerYear = 8 * (people / 1000);
             people = people + (birthRatePerYear - mortalityPerYear);
             System.out.println("Год " + year + " , численность населения составляет " + people);
         }
         // Задание № 4
-        int deposit = 15000;
-        total = 0;
+        total = 15000;
         count = 0;
         while (total <= 12_000_000) {
-            total = total + (total * 7 / 100);
-            total = total + deposit;
             System.out.println(count + " месяц сумма накоплений равна " + total);
+            total = total + (total * 7 / 100);
             count++;
         }
         // Задание № 5
-        deposit = 15000;
+        int deposit = 15000;
         total = 0;
         count = 0;
         while (total <= 12_000_000) {
@@ -58,26 +56,24 @@ public class Main {
         total = 0;
         count = 0;
         int month = 9 * 12;
-        while (month > 0) {
+        for (; month > 0; month--) {
             total = total + (total * 7 / 100);
             total = total + deposit;
             if (count % 6 == 0 && count != 0) {
                 System.out.println(count + " месяц сумма накоплений равна " + total);
             }
-            month--;
             count++;
 
         }
         // Задание № 7
         int dayFriday = 5;
         count = 0;
-        while (dayFriday <= 31) {
+        for (; dayFriday <= 31; dayFriday++) {
             if (count % 7 == 0) {
                 System.out.println("Сегодня пятница, " + dayFriday +
                         " е число. Необходимо подготовить отчет");
             }
             count++;
-            dayFriday++;
         }
         // Задание № 8
         year = 0;
